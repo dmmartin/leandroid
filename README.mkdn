@@ -18,8 +18,50 @@ A *cincai* Android fork based on LineageOS, built with love, duct tape, and sarc
 ## Getting Started
 
 To start building CincaiAndroid (based on LineageOS), you’ll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+## 🛠 Preparing Your Fedora
+
+Before you can start cincai-ing your Android build, make sure Fedora is ready to rumble.
+
+~~~
+
+### 1. Install Build Essentials
+---
+You can do this the short cincai way:
+
+```bash
+sudo dnf install @c-development @development-tools
+---
+Or, for the more ceremonial Fedora fans:
+
+sudo dnf group install "C Development Tools and Libraries" "Development Tools"
+---
+### 2. Install Additional Required Packages
+
+These are not optional. Missing one = hours of head-scratching.
+
+sudo dnf install --skip-unavailable \
+android-tools \
+ccache \
+clang \
+cmake \
+git-lfs \
+gperf \
+lzop \
+maven \
+meson \
+pngcrush \
+rpm-build \
+schedtool \
+dpkg-dev \
+libstdc++ \
+ncurses-compat-libs \
+python3-mako \
+python3-networkx \
+syslinux-devel \
+openssl-devel-engine \
+libxcrypt-compat
 
 ### Repo Initialization
-
+---
 ```bash
 repo init -u https://github.com/dmmartin/leandroid.git -b cincai-dev --git-lfs
