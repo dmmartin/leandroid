@@ -83,6 +83,177 @@ repo init -u https://github.com/dmmartin/leandroid.git -b cincai-dev --git-lfs
 
 6. Sync the Source
 
+
+# CincaiAndroid
+
+A *cincai* Android fork based on LineageOS, built with love, duct tape, and sarcasm.
+
+---
+
+## Release Channels
+
+| Label               | Stage             | Description                                                                 |
+| ------------------- | ----------------- | --------------------------------------------------------------------------- |
+| **cincai**          | Stable            | 💎 Official release. Tested, polished, and safe for your in-laws' phones.   |
+| **almost cincai**   | Release Candidate | 🧪 Almost there. Good enough for daily use, but might still randomly vibe.  |
+| **too cincai**      | Beta              | 🐛 Expect some weirdness. We're experimenting... with feeling.              |
+| **hardcore cincai** | Development       | 💥 Enter at your own risk. This is where dragons and dirty logs live.       |
+| **peak-cincai**     | Bleeding Edge     | 🚀 When this shows up, it means a **major version upgrade** is incoming.    |
+
+---
+
+## Getting Started
+
+To start building **CincaiAndroid** (based on LineageOS), you’ll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+
+---
+
+## 🛠 Preparing Your Fedora
+
+Before you can start cincai-ing your Android build, make sure Fedora is ready to rumble.
+
+---
+
+### 1. Install Build Essentials
+
+You can do this the short cincai way:
+
+```bash
+sudo dnf install @c-development @development-tools
+
+Or, for the more ceremonial Fedora fans:
+
+sudo dnf group install "C Development Tools and Libraries" "Development Tools"
+
+2. Install Additional Required Packages
+
+These are not optional. Missing one = hours of head-scratching.
+
+sudo dnf install --skip-unavailable \
+android-tools \
+ccache \
+clang \
+cmake \
+git-lfs \
+gperf \
+lzop \
+maven \
+meson \
+pngcrush \
+rpm-build \
+schedtool \
+dpkg-dev \
+libstdc++ \
+ncurses-compat-libs \
+python3-mako \
+python3-networkx \
+syslinux-devel \
+openssl-devel-engine \
+libxcrypt-compat
+
+    ✅ --skip-unavailable is used just in case some packages aren't in your enabled repos.
+    But ideally, keep your repos fresh.
+
+3. Setup Your Workspace
+
+mkdir -p ~/bin ~/android
+
+4. Get the repo Tool
+
+Download and install Google’s repo tool:
+
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+
+And make sure ~/bin is in your $PATH.
+5. Repo Initialization
+
+cd ~/android
+repo init -u https://github.com/dmmartin/leandroid.git -b most-cincai --git-lfs
+
+6. Sync the Source
+
+repo sync
+
+7. Build Time!
+
+. build/envsetup.sh
+lunch <device_codename>
+make bacon
+
+Or, if your ROM supports:
+
+brunch <device_codename>
+
+🧻 Side Note for Ubuntu Users
+
+If you're on Ubuntu... just don't. Save yourself the emotional damage.
+Fedora is the cincai-approved build distro — for a reason.
+⚠️ A Word to the Ubuntu Mouse-Click Warriors
+
+    "What’s wrong with Ubuntu??"
+
+Ohhh nothing much... except:
+
+    Compiler versions often outdated
+
+    Missing newer build tools unless you manually add obscure PPAs
+
+    Python versions weirdly bundled or symlinked wrong
+
+    Permissions cursed
+
+    Half your time goes into fixing things Fedora just installs right
+
+Ubuntu is great — for web browsing, opening VSCode, or watching anime.
+But for Android ROM building?
+
+    ❌ No. Don't do it.
+
+🩹 Save yourself. Use Fedora.
+
+Fedora has:
+
+    Fresh toolchains
+
+    Logical package naming
+
+    No weird surprises in /usr/bin/python
+
+    Less tribal StackOverflow copy-pasting
+
+So before you go full “why isn’t this working???”... just:
+
+sudo dnf install life
+
+🧨 Ubuntu Disclaimer
+🙅‍♂️ Ubuntu? Not Recommended.
+
+If you still insist on using Ubuntu — despite the warnings, the signs, and the ancient curses —
+please know the following:
+
+    You’re on your own.
+
+    The dev team officially recommends Mageia over Ubuntu.
+
+        Yes. We said Mageia.
+
+    If Mageia also feels too advanced for you...
+
+        🧸 Please consult the Ubuntu forums.
+
+        🧙 Our devs are not trained in handling apt-induced trauma.
+
+We repeat:
+
+    🛑 We take zero responsibility for crashes, curses, or random repo failures on Ubuntu.
+
+
+---
+
+Let me know if you'd like this written as a `README.md` file and pushed to your `cincaiandroid` GitHub repo automatically — or if you want to embed versioning metadata or include OTA badge tables too.
+
+
 repo sync
 
 
