@@ -61,7 +61,105 @@ syslinux-devel \
 openssl-devel-engine \
 libxcrypt-compat
 
-### Repo Initialization
+✅ --skip-unavailable is used just in case some packages aren't in your enabled repos. But ideally, keep your repos fresh.
+
+3. Setup Your Workspace
+
+mkdir -p ~/bin ~/android
+
+4. Get the repo Tool
+
+Download and install Google’s repo tool (replace ... with actual URL):
+
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+
+
+### 5. Repo Initialization
 ---
 ```bash
 repo init -u https://github.com/dmmartin/leandroid.git -b cincai-dev --git-lfs
+
+
+6. Sync the Source
+
+repo sync
+
+
+
+7. Build Time!
+
+. build/envsetup.sh
+lunch <device_codename>
+make bacon
+
+Or if your ROM supports:
+
+brunch <device_codename>
+
+🧻 Side Note for Ubuntu Users:
+
+If you're on Ubuntu... just don't. Save yourself the emotional damage.
+Fedora is the cincai-approved build distro — for a reason.
+
+
+---
+
+Let me know if you want a `setup-fedora.sh` auto-script version of this, or a witty bash pre-check that screams if someone tries to run `envsetup.sh` from Ubuntu.
+
+
+## ⚠️ A Word to the Ubuntu Mouse-Click Warriors
+
+> **"What’s wrong with Ubuntu??"**
+
+Ohhh nothing much... *except:*
+
+- Compiler versions often outdated
+- Missing newer build tools unless you manually add obscure PPAs
+- Python versions weirdly bundled or symlinked wrong
+- Permissions cursed
+- Half your time goes into fixing things Fedora just installs right
+
+Ubuntu is great — for web browsing, opening VSCode, or watching anime.  
+But for Android ROM building?
+
+> ❌ **No. Don't do it.**
+
+### 🩹 Save yourself. Use Fedora.
+
+Fedora has:
+- Fresh toolchains
+- Logical package naming
+- No weird surprises in `/usr/bin/python`
+- Less tribal stackoverflow copy-pasting
+
+So before you go full “why isn’t this working???”... just:
+
+```bash
+sudo dnf install life
+
+
+🧨 Ubuntu Disclaimer (README section)
+
+## 🙅‍♂️ Ubuntu? Not Recommended.
+
+If you **still** insist on using Ubuntu — despite the warnings, the signs, and the ancient curses —
+please know the following:
+
+- You’re **on your own**.
+- The dev team officially recommends **Mageia** over Ubuntu.
+  - Yes. We said **Mageia**.
+- If Mageia also feels too advanced for you...
+  - 🧸 Please consult the Ubuntu forums.
+  - 🧙 Our devs are not trained in handling `apt-induced trauma`.
+
+We repeat:
+> 🛑 **We take zero responsibility for crashes, curses, or random repo failure on Ubuntu.**
+
+
+
+
+
+
+
+
