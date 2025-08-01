@@ -1,36 +1,25 @@
-LineageOS
-===========
+# CincaiAndroid
+A *cincai* Android fork based on LineageOS, built with love, duct tape, and sarcasm.
 
-Getting started
----------------
+---
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+## Release Channels
 
-To initialize your local repository using the LineageOS trees, use a command like this:
-```
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
-```
-Then to sync up:
-```
-repo sync
-```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
+| Label               | Stage             | Description                                                                 |
+| ------------------- | ----------------- | --------------------------------------------------------------------------- |
+| **cincai**          | Stable            | 💎 Official release. Tested, polished, and safe for your in-laws' phones.   |
+| **almost cincai**   | Release Candidate | 🧪 Almost there. Good enough for daily use, but might still randomly vibe.  |
+| **too cincai**      | Beta              | 🐛 Expect some weirdness. We're experimenting... with feeling.              |
+| **hardcore cincai** | Development       | 💥 Enter at your own risk. This is where dragons and dirty logs live.       |
+| **peak-cincai**     | Bleeding Edge     | 🚀 When this shows up, it means a **major version upgrade** is incoming.    |
 
+---
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+## Getting Started
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+To start building CincaiAndroid (based on LineageOS), you’ll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+### Repo Initialization
 
-
-Buildbot
---------
-
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+```bash
+repo init -u https://github.com/dmmartin/leandroid.git -b cincai-dev --git-lfs
