@@ -177,6 +177,51 @@ repo sync
 
 7. Build Time!
 
+## ⚡ Performance Advice & Sanity Preservation Tips
+
+If you’re blessed with a **Ryzen Threadripper** (or anything above 16 cores),  
+**don’t be shy — use it**:
+
+```bash
+repo sync -c -j32
+
+    ⏱ With proper I/O and a good connection, a full repo sync and source update can complete in under 30 minutes.
+
+Compare this to some YouTubers (yes, we're looking at you Gary Explains) who thought syncing AOSP on a 2-core machine was a great tutorial idea.
+He repo-synced all night… and built all day. 😩
+
+Please don’t repeat his sins.
+❌ Don’t blindly follow "Building for AOSP devices" tutorials.
+
+Those devices are officially supported, with ready manifests and build guides written by Google engineers.
+Of course it works. It’s basically copy-paste with coffee.
+🛠 Building for Unsupported Devices?
+
+If you’re trying to build for a non-AOSP or unlisted device, the game changes.
+
+    💡 Tip: Keep ChatGPT open on the side.
+    GPT has helped countless devs work around:
+
+    Missing or broken device trees
+
+    Proprietary blob incompatibility
+
+    Manifest mismatches
+
+    Weird extract-files.py fails
+
+    Mysterious build errors
+
+    🔧 Remember: Building AOSP is easy.
+    Building for your own random device with no official trees, missing blobs, and weird Qualcomm configs — that's real Android development.
+
+ChatGPT won’t judge you. But it will save you.
+
+---
+
+Let me know if you want this section embedded into your existing README, or rendered as a separate markdown file (like `BUILD-TIPS.md`). Also happy to generate some fake Gary Explains quotes for comic relief. 😎
+
+
 . build/envsetup.sh
 lunch <device_codename>
 make bacon
