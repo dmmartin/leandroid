@@ -29,7 +29,7 @@
            remote="cincaiandroid"
           revision="main" />
   -->
-  <project path="android" name="dmmartin/leandroid" remote="dmmartin" revision="most-cincai"/>
+  <project path="android" name="CincaiAndroid" remote="dmmartin" revision="most-cincai"/>
   <project path="frameworks/base" name="dmmartin/android_frameworks_base" remote="dmmartin" revision="cincai-dev"/>
   <project path="vendor/cincaiOTA" name="dmmartin/android_vendor_cincaiAndroidOTA" remote="dmmartin" revision="main"/>
 </manifest>
