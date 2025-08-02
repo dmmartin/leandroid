@@ -2,7 +2,7 @@
 <manifest>
   <!-- Override crDroid or Lineage repos with your forks -->
 
-  <remote  name="leandroid"
+  <remote  name="dmmartin"
            fetch="https://github.com"
            sync-c="true"
            sync-j="10"
