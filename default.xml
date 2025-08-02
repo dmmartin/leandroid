@@ -38,11 +38,16 @@
   <project path="build/blueprint" name="LineageOS/android_build_blueprint" groups="pdk,tradefed" />
   <project path="build/pesto" name="platform/build/pesto" groups="pdk" remote="aosp" />
   <project path="build/release" name="LineageOS/android_build_release" groups="pdk,tradefed,sysui-studio" />
-  <!--project path="build/soong" name="LineageOS/android_build_soong" groups="pdk,tradefed,sysui-studio" >-->
+  <project path="build/soong" name="LineageOS/android_build_soong" groups="pdk,tradefed,sysui-studio" />
   <!--linkfile src="root.bp" dest="Android.bp" />-->
+<<<<<<< HEAD
   <!--linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   -->
+=======
+  <!--linkfile src="bootstrap.bash" dest="bootstrap.bash" />-->
+  </project-->
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <!--project path="art" name="LineageOS/android_art" groups="pdk" />-->
   <!--project path="bionic" name="LineageOS/android_bionic" groups="pdk" />-->
   <project path="bootable/deprecated-ota" name="LineageOS/android_bootable_deprecated-ota" groups="pdk-cw" />
@@ -891,7 +896,11 @@
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" remote="aosp" />
   <project path="system/chre" name="LineageOS/android_system_chre" groups="pdk" />
   <project path="system/connectivity/wificond" name="platform/system/connectivity/wificond" groups="pdk" remote="aosp" />
+<<<<<<< HEAD
   <!--project path="system/core" name="LineageOS/android_system_core" groups="pdk" -->
+=======
+  <project path="system/core" name="LineageOS/android_system_core" groups="pdk" />
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <project path="system/dmesgd" name="platform/system/dmesgd" groups="pdk" remote="aosp" />
   <project path="system/extras" name="LineageOS/android_system_extras" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
@@ -921,14 +930,22 @@
   <project path="system/memory/libmeminfo" name="platform/system/memory/libmeminfo" groups="pdk" remote="aosp" />
   <project path="system/memory/libmemtrack" name="platform/system/memory/libmemtrack" groups="pdk" remote="aosp" />
   <project path="system/memory/libmemunreachable" name="platform/system/memory/libmemunreachable" groups="pdk" remote="aosp" />
+<<<<<<< HEAD
   <!--project path="system/memory/lmkd" name="platform/system/memory/lmkd" groups="pdk" remote="aosp" -->
+=======
+  <project path="system/memory/lmkd" name="platform/system/memory/lmkd" groups="pdk" remote="aosp" />
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <project path="system/memory/mmd" name="platform/system/memory/mmd" groups="pdk" remote="aosp" />
   <project path="system/netd" name="LineageOS/android_system_netd" groups="pdk" />
   <project path="system/nfc" name="LineageOS/android_system_nfc" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" groups="pdk" remote="aosp" />
   <project path="system/secretkeeper" name="platform/system/secretkeeper" groups="pdk" remote="aosp" />
   <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
+<<<<<<< HEAD
   <!--project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" -->
+=======
+  <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <project path="system/server_configurable_flags" name="platform/system/server_configurable_flags" groups="pdk" remote="aosp" />
   <project path="system/teeui" name="platform/system/teeui" groups="pdk" remote="aosp" />
   <project path="system/testing/gtest_extras" name="platform/system/testing/gtest_extras" groups="pdk" remote="aosp" />
@@ -939,7 +956,11 @@
   <project path="system/tools/sysprop" name="platform/system/tools/sysprop" groups="pdk" remote="aosp" />
   <project path="system/tools/xsdc" name="platform/system/tools/xsdc" groups="pdk" remote="aosp" />
   <project path="system/unwinding" name="platform/system/unwinding" groups="pdk" remote="aosp" />
+<<<<<<< HEAD
   <!--project path="system/update_engine" name="LineageOS/android_system_update_engine" groups="pdk" -->
+=======
+  <project path="system/update_engine" name="LineageOS/android_system_update_engine" groups="pdk" />
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <project path="system/usb_info_tools" name="platform/system/usb_info_tools" groups="pdk" remote="aosp" />
   <project path="system/vold" name="LineageOS/android_system_vold" groups="pdk" />
   <project path="test/app_compat/csuite" name="platform/test/app_compat/csuite" groups="pdk" remote="aosp" />
@@ -959,7 +980,11 @@
   <project path="test/vts-testcase/performance" name="platform/test/vts-testcase/performance" groups="vts,projectarch,pdk" remote="aosp" />
   <project path="test/vts-testcase/security" name="platform/test/vts-testcase/security" groups="vts,projectarch,pdk" remote="aosp" />
   <project path="test/vts-testcase/vndk" name="platform/test/vts-testcase/vndk" groups="vts,pdk" remote="aosp" />
+<<<<<<< HEAD
   <!--project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" clone-depth="1" remote="aosp" -->
+=======
+  <project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" clone-depth="1" remote="aosp" />
+>>>>>>> 5a68f92 (adjustment default.xml and crdroid.xml)
   <project path="tools/aadevtools" name="platform/tools/aadevtools" groups="pdk" remote="aosp" />
   <project path="tools/acloud" name="platform/tools/acloud" groups="tools,vts,projectarch,pdk,tradefed" remote="aosp" />
   <project path="tools/apifinder" name="platform/tools/apifinder" groups="pdk,tools" remote="aosp" />
