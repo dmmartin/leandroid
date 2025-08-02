@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- Override crDroid or Lineage repos with your forks -->
-  <remote name="dmmartin" fetch="https://github.com" sync-c="true" sync-j="10" revision="refs/heads/most-cincai"/>
+  <remote name="dmmartin" fetch="https://github.com" sync-c="true" sync-j="10" revision="refs/heads/CincaiAndroid"/>
   <!--
   <!project name="cincaiandroid"
            path="android"
@@ -29,7 +29,7 @@
            remote="cincaiandroid"
           revision="main" />
   -->
-  <project path="android" name="CincaiAndroid" remote="dmmartin" revision="most-cincai"/>
+  <project path="android" name="CincaiAndroid" remote="dmmartin" revision="CincaiAndroid"/>
   <project path="frameworks/base" name="dmmartin/android_frameworks_base" remote="dmmartin" revision="cincai-dev"/>
   <project path="vendor/cincaiOTA" name="dmmartin/android_vendor_cincaiAndroidOTA" remote="dmmartin" revision="main"/>
 </manifest>
