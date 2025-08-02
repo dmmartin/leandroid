@@ -42,7 +42,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   <!--/project-->
-    <!--linkfile src="bootstrap.bash" dest="bootstrap.bash" -->
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   <!--/project-->
   <!--project path="art" name="LineageOS/android_art" groups="pdk" -->
   <!--project path="bionic" name="LineageOS/android_bionic" groups="pdk" -->
